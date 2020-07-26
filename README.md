@@ -75,3 +75,5 @@ When you are satisfied with your solution, download and send your workspace XML 
 We will then take a look at it and get back to you shortly thereafter!
 
 ### _Have fun!_
+
+PS: If you want to know more, why not check out this [job listing?](https://leoinnovationlab.com/job-vacancies-student-developer/)  
