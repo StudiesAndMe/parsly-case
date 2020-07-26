@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Introduction to Parsly</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<h1><strong>Parsly</strong> <img src="parsley.png" /></h1>
+<h3>- a parser implemented in Blockly</h3>
+<h1>Hello!</h1>
+<p>It is our pleasure to inform you that you have been personally picked out to help the rising star of the enterprise world, <em><em><strong>BusinessCorp Ltd</strong></em></em>, in their effort to build and sell a real parser for JSON-like objects. However, due to temporary technological embarrassment, their toolset has been reduced to a browser of your own choice, and a fork of Google's quite barebones Blockly demo.</p>
+<p>The parser still has to be finished though, as they need it in production as soon as possible. So grab your trusty mouse, find a place with a lot of space, and get to work.</p>
+<h2>Current features</h2>
+<p>Parsly already supports parsing multiple nice types, such as</p>
+<ul>
+<li>Natural numbers (<code>0</code>, <code>1</code>, <code>2</code>, ...)</li>
+<li>Positive decimals (<code>1.1</code>, <code>3.14</code>, <code>1421.171</code>, ...)</li>
+<li>Basic ASCII Strings of upper- and lowercase letters from <code>a</code> to <code>z</code>:<br />
+(<code>&quot;hi how are you&quot;</code>, <code>&quot;soup for one&quot;</code>)</li>
+<li>The boolean values <code>true</code> and <code>false</code></li>
+</ul>
+<h2>Features to add</h2>
+<p>This feature set is of course not nearly enough for a spin-out of <em><em><strong>BusinessCorp Ltd</strong></em></em>'s stature. Therefore, you are hereby asked to extend Parsly in the following ways:</p>
+<ol>
+<li><p>Extend the integer parser, so it parses negative integers as well as zero and the positive ones</p></li>
+<li><p>Extend the decimal parser, so it parses negative decimals just as well as the positive ones</p></li>
+</ol>
+<p>Furthermore, the director has also asked for the following features:</p>
+<ol start="3">
+<li><p>Parsing typed arrays. A typed array in this context is an array where all its elements have the same type; The arrays <code>[true, true, false]</code>, and <code>[&quot;hello&quot;, &quot;world&quot;]</code> are valid typed arrays, while <code>[1, &quot;two&quot;, 3.14]</code> is not.</p></li>
+<li><p>Parsing simple key-value dictionaries. Although all dictionary keys must be strings, the values within can have any of the types mentioned in this briefing so far. Furthermore, the values does not have to have the same types throughout the dictionary. Here is a well-formed dictionary:</p></li>
+</ol>
+<pre><code>  {
+    &quot;myInteger&quot;: 6969,
+    &quot;myDecimal&quot;: 1.23,
+    &quot;myList&quot;: [&quot;hey&quot;, &quot;this&quot;, &quot;is&quot;, &quot;fun&quot;]
+  }
+</code></pre>
+<h4>Good to know:</h4>
+<ul>
+<li>Save often</li>
+<li>You can add comments to your code by right-clicking any block and then select <code>Add Comment</code></li>
+<li>The Blockly blocks are transpiled into JavaScript source code. This means that the Blockly program is fundamentally JavaScript, and that JavaScript semantics and limitations are in effect.</li>
+<li>If you get in trouble, paste the generated js-code into your browser's console, and try debugging it with your browser's debugger.</li>
+<li>There are a few places wherein Parsly makes use of a global variable; primarily with the variable <code>mutableString</code></li>
+<li>In JavaScript, String, Number and Boolean function parameters are passed by value, while Object and Array are passed by reference. This is why the <code>StringObject</code> is used to keep track of the input string's state in the various parsers.<br />
+NB: Blockly's generator overrides JavaScript's usual equality comparison, so Blockly lists- and dictionaries are compared by value and not by reference, so don't worry about handling this.</li>
+<li>Be careful with the variables. Even though you can copy/paste variable blocks with the same variable name back and forth between functions, they might not be tied to the scopes that you think they are. When in doubt, delete the variable block, right click the function that has the variable you need, and create a fresh one.</li>
+</ul>
+<p>Expanding Parsly is not necessarily a simple task. The features you have been asked to build comes with edge cases and annoying details. However, it should be solvable by employing and expanding on the techniques that already used in the handout code.<br />
+And even if you don't complete it perfectly, we are still interested in reading your submission!<br />
+The case should be solvable in four or five hours time, but it might be beneficial to take a break once in a while you're working out a solution, instead of trying to solve it in one sitting.</p>
+<h3>Your work:</h3>
+<ul>
+<li>Implement the four features mentioned above.</li>
+<li>Show that your implementation works by adding ample tests, both positive and negative, in the main function. The code already contains some tests. You can run them by opening your browser's console, and then clicking the red arrow in the top right corner. You can enable these by right-clicking the blocks and selecting <code>Enable Block</code>.</li>
+<li>Start by implementing basic cases before you try your hand at recursive cases (such as arrays of arrays of integers, or dictionaries containing dictionaries)</li>
+</ul>
+<h3>Getting started</h3>
+<ol>
+<li>Clone and unpack this repository somewhere on your computer.</li>
+<li>Point your browser to the <a href="parsly.html">Parsly Case</a></li>
+<li>Paste the contents of <a href="parsly-base.xml" class="uri">parsly-base.xml</a> into the XML tab of the application</li>
+<li>To download your current workspace, click the save button in the upper right corner.</li>
+</ol>
+<h2>Handing in your solution</h2>
+<p>When you are satisfied with your solution, download and send your workspace XML to <a href="mailto:mikkel.storgaard@leoilab.com">mikkel.storgaard@leoilab.com</a>.<br />
+We will then take a look at it and get back to you shortly thereafter!</p>
+<h3><em>Have fun!</em></h3>
+</body>
+</html>
