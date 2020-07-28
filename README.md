@@ -24,10 +24,12 @@ Therefore, you are hereby asked to extend Parsly in the following ways:
 
   2. Extend the decimal parser, so it parses negative decimals just as well as the positive ones  
 
-Furthermore, the director has also asked for the following features:
+But what the director really wants is the addition of the following feature:
 
   3. Parsing typed arrays. A typed array in this context is an array where all its elements have the same type;
   The arrays `[true, true, false]`, and `["hello", "world"]` are valid typed arrays, while `[1, "two", 3.14]` is not.  
+  
+Furthermore, you can implement dictionaries as described below. However, this is completely optional, and you should only do it for your own amusement and bragging points.
 
   4. Parsing simple key-value dictionaries. Although all dictionary keys must be strings, the values within can have any of the types mentioned in this briefing so far.
   Furthermore, the values does not have to have the same types throughout the dictionary. 

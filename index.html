@@ -1,12 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Introduction to Parsly</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
 </head>
 <body>
 <h1><strong>Parsly</strong> <img src="parsley.png" /></h1>
@@ -20,7 +25,7 @@
 <li>Natural numbers (<code>0</code>, <code>1</code>, <code>2</code>, ...)</li>
 <li>Positive decimals (<code>1.1</code>, <code>3.14</code>, <code>1421.171</code>, ...)</li>
 <li>Basic ASCII Strings of upper- and lowercase letters from <code>a</code> to <code>z</code>:<br />
-(<code>&quot;hi how are you&quot;</code>, <code>&quot;soup for one&quot;</code>)</li>
+(<code>"hi how are you"</code>, <code>"soup for one"</code>)</li>
 <li>The boolean values <code>true</code> and <code>false</code></li>
 </ul>
 <h2>Features to add</h2>
@@ -29,10 +34,13 @@
 <li><p>Extend the integer parser, so it parses negative integers as well as zero and the positive ones</p></li>
 <li><p>Extend the decimal parser, so it parses negative decimals just as well as the positive ones</p></li>
 </ol>
-<p>Furthermore, the director has also asked for the following features:</p>
+<p>But what the director really wants is the addition of the following feature:</p>
 <ol start="3">
-<li><p>Parsing typed arrays. A typed array in this context is an array where all its elements have the same type; The arrays <code>[true, true, false]</code>, and <code>[&quot;hello&quot;, &quot;world&quot;]</code> are valid typed arrays, while <code>[1, &quot;two&quot;, 3.14]</code> is not.</p></li>
-<li><p>Parsing simple key-value dictionaries. Although all dictionary keys must be strings, the values within can have any of the types mentioned in this briefing so far. Furthermore, the values does not have to have the same types throughout the dictionary. Here is a well-formed dictionary:</p></li>
+<li>Parsing typed arrays. A typed array in this context is an array where all its elements have the same type; The arrays <code>[true, true, false]</code>, and <code>["hello", "world"]</code> are valid typed arrays, while <code>[1, "two", 3.14]</code> is not.</li>
+</ol>
+<p>Furthermore, you can implement dictionaries as described below. However, this is completely optional, and you should only do it for your own amusement and bragging points.</p>
+<ol start="4">
+<li>Parsing simple key-value dictionaries. Although all dictionary keys must be strings, the values within can have any of the types mentioned in this briefing so far. Furthermore, the values does not have to have the same types throughout the dictionary. Here is a well-formed dictionary:</li>
 </ol>
 <pre><code>  {
     &quot;myInteger&quot;: 6969,
@@ -64,7 +72,7 @@ The case should be solvable in four or five hours time, but it might be benefici
 <ol>
 <li>Clone and unpack this repository somewhere on your computer.</li>
 <li>Point your browser to the <a href="parsly.html">Parsly Case</a></li>
-<li>Paste the contents of <a href="parsly-base.xml" class="uri">parsly-base.xml</a> into the XML tab of the application</li>
+<li>Paste the contents of <a href="parsly-base.xml">parsly-base.xml</a> into the XML tab of the application</li>
 <li>To download your current workspace, click the save button in the upper right corner.</li>
 </ol>
 <h2>Handing in your solution</h2>
