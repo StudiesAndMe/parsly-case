@@ -67,8 +67,8 @@ You can enable these by right-clicking the blocks and selecting `Enable Block`.
 * Start by implementing basic cases before you try your hand at recursive cases (such as arrays of arrays of integers, or dictionaries containing dictionaries)
 
 ### Getting started
-1. Clone and unpack this repository somewhere on your computer.
-2. Point your browser to the [Parsly Case](parsly.html)
+1. Clone and unpack [this repository](https://github.com/leoilab/parsly-case) somewhere on your computer.
+2. Open the [Parsly Case](parsly.html) in your browser.
 3. Paste the contents of [parsly-base.xml](parsly-base.xml) into the XML tab of the application
 4. To download your current workspace, click the save button in the upper right corner.
 
