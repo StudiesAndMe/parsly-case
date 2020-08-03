@@ -3,6 +3,9 @@ INDEX = index.html
 
 all: $(COPY_FILES) $(INDEX)
 
+clean:
+	rm $(INDEX) $(COPY_FILES)
+
 $(COPY_FILES):
 	cp blockly/$@ $@
 
