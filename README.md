@@ -48,8 +48,8 @@ Furthermore, you can implement dictionaries as described below. However, this is
 * The Blockly blocks are transpiled into JavaScript source code.
 This means that the Blockly program is fundamentally JavaScript, and that JavaScript semantics and limitations are in effect.
 * If you get in trouble, paste the generated js-code into your browser's console, and try debugging it with your browser's debugger.
-* There are a few places wherein Parsly makes use of a global variable; primarily with the variable `mutableString`
-* In JavaScript, String, Number and Boolean function parameters are passed by value, while Object and Array are passed by reference. This is why the `StringObject` is used to keep track of the input string's state in the various parsers.  
+* There are a few places wherein Parsly makes use of a global variable; mainly with the variable `mutableString` and the global `objectBuffer`
+* In JavaScript, String, Number and Boolean function parameters are passed by value, while Objects are passed by reference. This is why the `StringObject` is used to keep track of the input string's state in the various parsers.  
 NB: Blockly's generator overrides JavaScript's usual equality comparison, so Blockly lists- and dictionaries are compared by value and not by reference, so don't worry about handling this.
 * Be careful with the variables. Even though you can copy/paste variable blocks with the same variable name back and forth between functions,
 they might not be tied to the scopes that you think they are. When in doubt, delete the variable block, right click the function that has the variable you need, and create a fresh one.
@@ -60,7 +60,7 @@ And even if you don't complete it perfectly, we are still interested in reading 
 The case should be solvable in four or five hours time, but it might be beneficial to take a break once in a while you're working out a solution, instead of trying to solve it in one sitting.
 
 ### Your work:
-* Implement the four features mentioned above.
+* Implement at least three of the features mentioned above.
 * Show that your implementation works by adding ample tests, both positive and negative, in the main function.
 The code already contains some tests. You can run them by opening your browser's console, and then clicking the red arrow in the top right corner.
 You can enable these by right-clicking the blocks and selecting `Enable Block`.
