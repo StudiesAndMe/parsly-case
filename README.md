@@ -28,6 +28,7 @@ But what the director really wants is the addition of the following feature:
 
   3. Parsing typed arrays. A typed array in this context is an array where all its elements have the same type;
   The arrays `[true, true, false]`, and `["hello", "world"]` are valid typed arrays, while `[1, "two", 3.14]` is not.  
+  NB: The array contents does only have to be typed correctly on the current "level". This means that `[[true, false], [1,2,3], ["hello"]]` is allowed, as the top array contains arrays, and each of arrays are well typed as well.
   
 Furthermore, you can implement dictionaries as described below. However, this is completely optional, and you should only do it for your own amusement and bragging points.
 

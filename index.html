@@ -36,7 +36,8 @@
 </ol>
 <p>But what the director really wants is the addition of the following feature:</p>
 <ol start="3">
-<li>Parsing typed arrays. A typed array in this context is an array where all its elements have the same type; The arrays <code>[true, true, false]</code>, and <code>["hello", "world"]</code> are valid typed arrays, while <code>[1, "two", 3.14]</code> is not.</li>
+<li>Parsing typed arrays. A typed array in this context is an array where all its elements have the same type; The arrays <code>[true, true, false]</code>, and <code>["hello", "world"]</code> are valid typed arrays, while <code>[1, "two", 3.14]</code> is not.<br />
+NB: The array contents does only have to be typed correctly on the current "level". This means that <code>[[true, false], [1,2,3], ["hello"]]</code> is allowed, as the top array contains arrays, and each of arrays are well typed as well.</li>
 </ol>
 <p>Furthermore, you can implement dictionaries as described below. However, this is completely optional, and you should only do it for your own amusement and bragging points.</p>
 <ol start="4">
