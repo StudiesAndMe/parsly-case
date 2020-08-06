@@ -1,3 +1,3 @@
 [submodule "blockly"]
 	path = blockly
-	url = git@github.com:mikkelstorgaard/blockly
+	url = https://www.github.com/mikkelstorgaard/blockly
